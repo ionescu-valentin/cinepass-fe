@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+  font-family: 'Russo One', sans-serif;
+}
+
+body {
+  background-color: black !important;
+}
+
+.text-main {
+  color: #13CCB6;
+}
+
+.bg-main {
+  background-color: #008575 !important;
+  border: none !important;
+}
+
+.button, .ant-btn {
+  border-radius: 4px !important;
+  padding: 10 30px !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.h-100vh {
+  height: calc(100vh - 180px);
+}

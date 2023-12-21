@@ -1,0 +1,17 @@
+<div *ngIf="movies.length && selectedMovie" class="px-5 pt-4 h-100vh d-flex flex-column justify-content-between">
+  <div class="d-flex justify-content-between mb-5 position-relative preview pe-5">
+    <div class="d-flex flex-column" style="width: 400px;">
+      <h4 class="text-white">{{selectedMovie.Title}}</h4>
+      <p class="text-white" style="font-size: 14px;">{{selectedMovie.Plot}}</p>
+      <button class="btn bg-main">See Cinemas</button>
+    </div>
+    <img class="poster" width="800px" [src]="selectedMovie.Poster" alt="">
+    <div class="poster-overlay"></div>
+  </div>
+  <div class="d-flex gap-5 overflow-hidden list">
+    <div *ngFor="let movie of movies" class="movie" (click)="selectMovie(movie)">
+      <img width="150px" [src]="movie.Poster" alt="">
+      <div class="text-white italic mt-2">{{movie.Title}}</div>
+    </div>
+  </div>
+</div>

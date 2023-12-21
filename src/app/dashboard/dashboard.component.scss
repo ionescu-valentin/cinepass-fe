@@ -1,0 +1,20 @@
+.input {
+  width: 400px !important;
+}
+
+:host ::ng-deep nz-input-group {
+  border-radius: 50px !important;
+  background-color: #3e4046 !important;
+  border: none !important;
+  height: 36px;
+  width: 400px !important;
+
+  input {
+    background-color: #3e4046 !important;
+    border: none !important;
+    color: #fff !important;
+  }
+}
+:host ::ng-deep .ant-input-affix-wrapper {
+  color: #13CCB6 !important;
+}

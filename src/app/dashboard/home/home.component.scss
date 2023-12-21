@@ -1,0 +1,38 @@
+.btn {
+  width: fit-content !important;
+  padding: 10px 30px !important;
+  border-radius: 50px !important;
+  color: white;
+}
+
+.poster {
+  position: absolute;
+  right: 0;
+  top: -150px;
+  border-radius: 30%;
+  z-index: -1;
+  border: 1px solid black;
+  max-height: 94vh;
+  object-fit: cover;
+}
+
+.poster-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 0;
+  top: -150px;
+  border-radius: 30%;
+  box-shadow: inset 100px 100px 50px 0 rgba(0, 0, 0, 1),
+    inset -100px -100px 50px 0 rgba(0, 0, 0, 1);
+  z-index: -1;
+  width: 800px;
+  height: 1183px;
+  max-height: 94vh;
+}
+
+.movie {
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+}

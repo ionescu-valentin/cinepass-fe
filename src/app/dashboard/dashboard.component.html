@@ -1,0 +1,27 @@
+<div class="background">
+  <div class="px-5 pt-4">
+    <div class="d-flex justify-content-between align-items-center text-white">
+      <h3 class="mb-0 text-main">CINEPASS</h3>
+      <div class="d-flex justify-content-center gap-5">
+        <a routerLink="home" routerLinkActive="text-main">Home</a>
+        <a>Browse</a>
+        <a>Profile</a>
+      </div>
+      <div class="d-flex">
+        Bucharest, Ro
+      </div>
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+      <nz-form-item class="mb-4">
+        <nz-form-control nzErrorTip="Please input a valid email!">
+          <nz-input-group nzSuffixIcon="search">
+            <input type="text" nz-input [formControl]="search" placeholder="Search..." />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <hr class="bg-white">
+
+  <router-outlet></router-outlet>
+</div>
