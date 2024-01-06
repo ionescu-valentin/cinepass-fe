@@ -1,0 +1,57 @@
+<div *ngIf="movieDetails" class="px-5 pt-4 h-100vh">
+  <div class="d-flex gap-5">
+    <div class="d-flex flex-column" style="width: 600px;">
+      <div class="d-flex justify-content-between mb-4">
+        <div class="d-flex flex-column">
+          <h4 class="text-white">{{movieDetails.Title}}</h4>
+          <div class="d-flex align-items-center mb-2">
+            <span class="me-2">{{movieDetails.Genre}}</span>
+            <span class="py-1 px-2 bg-dark rounded">{{movieDetails.Runtime}}</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="me-2">{{cinemaDetails.name}}</span>
+            <span class="py-1 px-2 bg-success rounded">{{timeDetails.time}}</span>
+          </div>
+        </div>
+        <img class="border-white border-1" [src]="cinemaDetails.imageUrl" width="100" height="100" alt="">
+      </div>
+      <img class="poster" width="600px" height="500px" [src]="movieDetails.Poster" alt="">
+    </div>
+    <div>
+      <div class="rounded bg-dark p-4 h-fit mb-3">
+        <div class="d-flex justify-content-center gap-4 mb-4">
+          <div class="d-flex align-items-center gap-2">
+            <div class="circle bg-green"></div> Free
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <div class="circle bg-main"></div> Selected
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <div class="circle bg-danger"></div> Taken
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-3 mb-4">
+          <div *ngFor="let seatsRow of roomDetails" class="d-flex gap-3">
+            <span class="me-3">{{seatsRow.letter}}</span>
+            <div *ngFor="let seat of seatsRow.seats" class="circle d-flex align-items-center justify-content-center"
+              (click)="selectSeat(seat)" [ngClass]="{
+                'bg-green': seat.status === 'available',
+                'bg-main': seat.status === 'selected',
+                'bg-danger': seat.status === 'reserved',
+                'pointer': seat.status !== 'reserved'
+              }">
+              <span>{{seat.number}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="screen bg-main" style="font-size: 10px; text-align: center;">screen</div>
+      </div>
+      <nz-card *ngIf="selectedSeatsList.length" nzTitle="Reservation details" [nzExtra]="extraTemplate">
+        Selected Seats: {{selectedSeatsList.join(', ')}}
+      </nz-card>
+      <ng-template #extraTemplate>
+        {{selectedSeatsList.length}} seats reserved
+      </ng-template>
+    </div>
+  </div>
+</div>

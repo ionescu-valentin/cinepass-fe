@@ -5,12 +5,14 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { SharedModule } from '../_shared/shared.module';
 import { HomeComponent } from './home/home.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    ReservationComponent
   ],
   imports: [
     CommonModule,

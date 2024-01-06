@@ -1,4 +1,5 @@
 @import "~ng-zorro-antd/ng-zorro-antd.min.css";
+@import "~ng-zorro-antd/ng-zorro-antd.dark.css";
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 * {
@@ -7,6 +8,10 @@
 
 body {
   background-color: black !important;
+}
+
+a:not(.text-main) {
+  color: white !important;
 }
 
 .text-main {
@@ -29,4 +34,12 @@ body {
 
 .h-100vh {
   height: calc(100vh - 180px);
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.pointer {
+  cursor: pointer;
 }

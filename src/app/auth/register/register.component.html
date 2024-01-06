@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5 bg-black">
+  <h1 class="mb-5 text-main">CINEPASS</h1>
+  <form nz-form [formGroup]="registerForm" class="login-form" (ngSubmit)="submitForm()">
+    <h3 class="text-center text-white mb-5">Log in</h3>
+    <label nzRequired nzFor="lastName" class="text-white mb-1">Last Name</label>
+    <nz-form-item class="mb-4">
+      <nz-form-control nzErrorTip="Please input a valid name!">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="lastName"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <label nzRequired nzFor="firstName" class="text-white mb-1">First Name</label>
+    <nz-form-item class="mb-4">
+      <nz-form-control nzErrorTip="Please input a valid name!">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="firstName"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <label nzRequired nzFor="email" class="text-white mb-1">Email Address</label>
+    <nz-form-item class="mb-4">
+      <nz-form-control nzErrorTip="Please input a valid email!">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="email"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <label nzRequired nzFor="password" class="text-white mb-1">Password</label>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Password!">
+        <nz-input-group>
+          <input type="password" nz-input formControlName="password"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <label nzRequired nzFor="repeatPassword" class="text-white mb-1">Confirm Password</label>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Password!">
+        <nz-input-group>
+          <input type="password" nz-input formControlName="repeatPassword"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <div class="d-flex justify-content-center mb-5">
+      <button nz-button class="login-form-button login-form-margin bg-main" [nzType]="'primary'">Register</button>
+    </div>
+    <div class="d-flex justify-content-between">
+      <p><span class="text-white">Already have an account? </span><a routerLink="../login" class="text-main">Log into your account!</a></p>
+    </div>
+  </form>
+</div>

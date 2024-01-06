@@ -8,7 +8,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { IconDefinition } from '@ant-design/icons-angular';
 import { PlusOutline, UserOutline, LockOutline, SearchOutline } from '@ant-design/icons-angular/icons';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzCardModule } from 'ng-zorro-antd/card';
 
 const icons: IconDefinition[] = [ UserOutline, LockOutline, PlusOutline, SearchOutline ];
 
@@ -22,6 +22,7 @@ const icons: IconDefinition[] = [ UserOutline, LockOutline, PlusOutline, SearchO
     NzButtonModule,
     HttpClientModule,
     NzIconModule.forChild(icons),
+    NzCardModule
 
   ],
    exports: [
@@ -31,6 +32,7 @@ const icons: IconDefinition[] = [ UserOutline, LockOutline, PlusOutline, SearchO
     NzButtonModule,
     HttpClientModule,
     NzIconModule,
+    NzCardModule
    ]
 })
 export class SharedModule { }
