@@ -5,6 +5,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../_shared/shared.module';
+import { GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SharedModule } from '../_shared/shared.module';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    SharedModule
+    SharedModule,
+    GoogleSigninButtonModule
   ]
 })
 export class AuthModule { }

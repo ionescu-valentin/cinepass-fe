@@ -13,7 +13,7 @@ import { MoviesApiService } from 'src/app/_core/services/movies-api.service';
 export class ReservationComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private moviesApiService = inject(MoviesApiService);
-  roomDetails = RoomRows;
+  roomDetails = [...RoomRows];
   cinemaDetails: Cinema;
   movieDetails: Movie;
   timeDetails: Time;
@@ -21,7 +21,7 @@ export class ReservationComponent implements OnInit {
   ngOnInit(): void {
     const data = this.route.snapshot.queryParams;
     this.cinemaDetails = Cinemas.find((cinema) => cinema.name === data['cinema']);
-    this.timeDetails = this.cinemaDetails.times.find((time) => time.id === data['timeId']);
+    this.timeDetails = {...this.cinemaDetails.times.find((time) => time.id === data['timeId'])};
     this.setSeats();
     this.moviesApiService.getMovieById(data['movieId']).subscribe((res) => {
       this.movieDetails = res;

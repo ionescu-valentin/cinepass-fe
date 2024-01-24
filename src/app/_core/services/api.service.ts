@@ -12,6 +12,7 @@ export class ApiService {
     private http: HttpClient,
   ) {
     this.apiUrl = 'http://www.omdbapi.com/';
+    // this.apiUrl = 'http://localhost:3005/';
   }
 
   get(path: string, params = {}, headers = {}) {
