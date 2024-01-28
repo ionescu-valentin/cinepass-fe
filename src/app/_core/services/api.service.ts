@@ -11,8 +11,7 @@ export class ApiService {
   constructor(
     private http: HttpClient,
   ) {
-    // this.apiUrl = 'http://www.omdbapi.com/';
-    this.apiUrl = 'http://127.0.0.1:3005/api/v1/';
+    this.apiUrl = 'https://cinepass-be.onrender.com/api/v1/';
   }
 
   get(path: string, params = {}, headers = {}) {
