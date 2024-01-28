@@ -47,7 +47,10 @@
         <div class="screen bg-main" style="font-size: 10px; text-align: center;">screen</div>
       </div>
       <nz-card *ngIf="selectedSeatsList.length" nzTitle="Reservation details" [nzExtra]="extraTemplate">
-        Selected Seats: {{selectedSeatsList.join(', ')}}
+        <div class="d-flex justify-content-between">
+          Selected Seats: {{selectedSeatsList.join(', ')}}
+          <button nz-button nzType="primary" class="btn bg-main" (click)="reserveSeats()">Reserve</button>
+        </div>
       </nz-card>
       <ng-template #extraTemplate>
         {{selectedSeatsList.length}} seats reserved

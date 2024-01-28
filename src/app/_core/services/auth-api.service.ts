@@ -9,8 +9,8 @@ export class AuthApiService {
 
   constructor(private apiService: ApiService) { }
 
-  googleLogin(): Observable<any> {
-    return this.apiService.get(`auth/google`);
+  googleLogin(user: any): Observable<any> {
+    return this.apiService.post(`auth/login`, user);
   }
 
   getMovieById(id: string): Observable<any> {

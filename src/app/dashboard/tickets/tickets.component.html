@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center flex-column justify-content-center">
+  <div class="mb-4" *ngFor="let ticket of selectedSeats; index as i">
+    <nz-card [nzTitle]="'Ticket #' + (i + 1)">
+      <div class="d-flex justify-content-between">
+        <div>
+            <div><span class="text-main">Movie:</span> {{movieName}}</div>
+            <div><span class="text-main">Cinema:</span> {{cinemaDetails.name}}, {{ cinemaDetails.location }}</div>
+            <div><span class="text-main">Time:</span> {{time}}</div>
+            <div><span class="text-main">Seat:</span> {{ticket}}</div>
+        </div>
+        <div class="ms-5" style="background-color: white;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png" width="100" height="100" alt="">
+        </div>
+      </div>
+    </nz-card>
+  </div>
+</div>

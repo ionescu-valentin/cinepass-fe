@@ -1,6 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { Cinemas } from 'src/app/_core/constants/cinemas.const';
 import { Movie } from 'src/app/_core/models/movies.model';
 import { MoviesApiService } from 'src/app/_core/services/movies-api.service';
 
@@ -32,8 +31,7 @@ export class HomeComponent implements OnInit {
 
   setSelectedMovie(id: string): Observable<Movie> {
     return this.moviesApiService.getMovieById(id).pipe(map((res) => {
-      const movie = res;
-      movie.Cinemas = Cinemas;
+      const movie = res.movieDetails;
       return movie;
     }));
   }

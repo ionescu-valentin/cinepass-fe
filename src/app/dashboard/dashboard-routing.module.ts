@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 const routes: Routes = [
   {
@@ -21,10 +22,10 @@ const routes: Routes = [
         path: 'reservation',
         component: ReservationComponent
       },
-      // {
-      //   path: 'tickets',
-      //   component: TicketsComponent
-      // },
+      {
+        path: 'tickets',
+        component: TicketsComponent
+      },
       {
         path: '',
         redirectTo: 'home',

@@ -6,13 +6,15 @@ import { DashboardComponent } from './dashboard.component';
 import { SharedModule } from '../_shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     HomeComponent,
-    ReservationComponent
+    ReservationComponent,
+    TicketsComponent
   ],
   imports: [
     CommonModule,

@@ -15,10 +15,12 @@ export interface Cinema {
   location: string;
   times: Time[];
   imageUrl: string;
+  id: number;
 }
 
 export interface Time {
-  id: string;
+  id: number;
+  seats: number[];
   time: string;
   spotsLeft: number;
 }
